@@ -1,3 +1,6 @@
+APScheduler==3.6.3
+backports.zoneinfo==0.2.1
+cachetools==4.2.2
 certifi==2021.10.8
 charset-normalizer==2.0.7
 flake8==4.0.1
@@ -8,9 +11,14 @@ mccabe==0.6.1
 pycodestyle==2.8.0
 pyflakes==2.4.0
 python-dotenv==0.19.1
+python-telegram-bot==13.7
+pytz==2021.3
 requests==2.26.0
 six==1.16.0
 spotipy==2.19.0
+tornado==6.1
 typing-extensions==3.10.0.2
+tzdata==2021.2.post0
+tzlocal==3.0
 urllib3==1.26.7
 zipp==3.6.0

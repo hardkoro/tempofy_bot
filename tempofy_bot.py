@@ -5,8 +5,8 @@ from telegram import ParseMode
 from telegram.ext import (CommandHandler, Defaults, Filters, MessageHandler,
                           Updater)
 
-from help import FEATURE_HELP
-from song import get_song_data
+from help import FEATURE_HELP, START_MESSAGE
+from get_song_features import get_song_data
 
 load_dotenv(find_dotenv())
 TOKEN = getenv('TOKEN')
@@ -42,7 +42,7 @@ class TempofyBot():
     def start(self, update, context):
         user = update.effective_user
         update.message.reply_markdown_v2(
-            fr'Hi, {user.mention_markdown_v2()}\!'
+            START_MESSAGE.format(username=user.mention_markdown_v2())
         )
 
     def help(self, update, context):
@@ -54,12 +54,9 @@ class TempofyBot():
                 get_song_data(update.message.text),
                 parse_mode=ParseMode.MARKDOWN
             )
-        except Exception as e:
+        except Exception:
             update.message.reply_text(
-                'Sorry! But I can''t find song with this URI at Spotify'
-            )
-            update.message.reply_text(
-                str(e)
+                'Sorry! But I can\'t find song with this URI at Spotify 💁'
             )
 
 
