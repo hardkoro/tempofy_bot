@@ -3,6 +3,7 @@
 ## Description
 
 Returns Spotify track features by track URI
+Bot in Telegram: https://t.me/tempofy_bot
 
 ## Install
 
@@ -37,5 +38,3 @@ Run project:
 ```bash
 python tempofy_bot.py
 ```
-
-Bot in Telegram: https://t.me/tempofy_bot
