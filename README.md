@@ -2,8 +2,7 @@
 
 ## Description
 
-Returns Spotify track features by track URI
-Bot in Telegram: https://t.me/tempofy_bot
+Returns Spotify track features by track URI. Bot in Telegram: https://t.me/tempofy_bot
 
 ## Install
 
